@@ -19,9 +19,9 @@ $router = new Router($_SERVER["REQUEST_URI"], $routes);
 
 //Check for a 404
 if (!$route = $router->getRoute())
-{ header("Status: 404 Not Found");
-  $route = $routes['404'];
-}
+      {   header("Status: 404 Not Found");
+          $route = $routes['404'];
+      }
 // Set the variables
 $router->setVariables();
 // Authenticate if needed
